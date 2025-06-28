@@ -79,6 +79,8 @@ st.success(f"Predicted Confirmed Cases for Next Day: {int(predicted_cases[0])}")
 # ----------------------------------------
 # Additional Visualization: Deaths Over Time
 # ----------------------------------------
+
+# Added death chart and prediction for final sprint (for Git commit)
 st.subheader("Deaths Over Time")
 
 fig2, ax2 = plt.subplots()
