@@ -14,7 +14,7 @@ df = pd.read_csv("data/covid_19_data.csv")
 # Convert the 'Observation_date' column to datetime format
 df['Observation_date'] = pd.to_datetime(df['Observation_date'])
 
-# Sidebar filters
+# Sprint 2: Added sidebar filters for selecting country and date
 st.sidebar.header("Filter Data")
 selected_country = st.sidebar.selectbox("Select a Country", sorted(df['Country_Region'].unique()))
 
@@ -43,7 +43,7 @@ st.metric("Total Confirmed", int(filtered_df['Confirmed'].sum()))
 st.metric("Total Deaths", int(filtered_df['Deaths'].sum()))
 st.metric("Total Recovered", int(filtered_df['Recovered'].sum()))
 
-# Line chart of confirmed cases over time
+# Sprint 3: Line chart added to visualize confirmed COVID-19 cases over time
 st.subheader("Confirmed Cases Over Time")
 fig, ax = plt.subplots()
 ax.plot(filtered_df['Observation_date'], filtered_df['Confirmed'], color='blue', marker='o')
